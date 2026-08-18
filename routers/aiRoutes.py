@@ -226,4 +226,5 @@ async def ai_chat(chat: ChatMessage):
         return {"reply": response_text, "products": recommended_products}
 
     except Exception as e:
+        print(f"Gemini API Error: {e}")
         raise HTTPException(status_code=500, detail="AI is currently unavailable.")
